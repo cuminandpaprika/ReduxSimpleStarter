@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Constants from './consts'
+import SearchBar from './components/search_bar'
+
 // Create new component that outputs HTML
 const App = () => {
   return <div>Hi!</div>;

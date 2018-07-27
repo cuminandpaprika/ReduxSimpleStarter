@@ -1,0 +1,1 @@
+const YOUTUBE_API_KEY = 'AIzaSyC_X0wdGv0rECiYL4B5mwKyaYWvvKfe5Po'
