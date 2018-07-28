@@ -46,18 +46,23 @@ class SearchBar extends Component {
         // We only manipulate state inside constructor. Otherwise we use this.setState
         // We never want to do this.state.term = asdfasdf
         // Using set state allows continuity with the State object
-        this.state = { term: 'Starting Value'};
+        this.state = { term: ''};
     }
 
     render() {
         return (
-            <div>
+            <div className = "search-bar">
                 <input
                     value = {this.state.term}
-                    onChange = {event => this.setState({ term: event.target.value})} />
-                Value of the input: {this.state.term}
+                    onChange = {event => this.onInputChange(event.target.value)}
+                />
             </div>
         );
+    }
+
+    onInputChange(term) {
+        this.setState({term});
+        this.props.onSearchTermChange(term);
     }
 }
 
